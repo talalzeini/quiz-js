@@ -183,5 +183,106 @@ const questions = [
     ]
 
 },
+{
+    question: "20 * 11 = ?",
+    answers:[
+{ text:'210', correct : false},
+{ text:'211', correct : false},
+{ text:'220', correct : true},
+{ text:'230', correct : false}
+    ]
+
+},
+{
+    question: "8 * 65 = ?",
+    answers:[
+{ text:'515', correct : false},
+{ text:'510', correct : false},
+{ text:'520', correct : true},
+{ text:'525', correct : false}
+    ]
+
+},
+{
+    question: "560 / 8 = ?",
+    answers:[
+{ text:'7', correct : true},
+{ text:'9', correct : false},
+{ text:'8', correct : false},
+{ text:'6', correct : false}
+    ]
+
+},
+{
+    question: "45 * 6 = ?",
+    answers:[
+{ text:'265', correct : false},
+{ text:'260', correct : false},
+{ text:'270', correct : true},
+{ text:'275', correct : false}
+    ]
+
+},
+{
+    question: "855 / 5 = ?",
+    answers:[
+{ text:'168', correct : false},
+{ text:'170', correct : false},
+{ text:'169', correct : false},
+{ text:'171', correct : true}
+    ]
+
+},
+{
+    question: "165 / 15 = ?",
+    answers:[
+{ text:'16', correct : false},
+{ text:'14', correct : false},
+{ text:'11', correct : true},
+{ text:'9', correct : false}
+    ]
+
+},
+{
+    question: "78 / 3 = ?",
+    answers:[
+{ text:'26', correct : true},
+{ text:'27', correct : false},
+{ text:'31', correct : false},
+{ text:'28', correct : false}
+    ]
+
+},
+{
+    question: "26 * 6 = ?",
+    answers:[
+{ text:'146', correct : false},
+{ text:'156', correct : true},
+{ text:'153', correct : false},
+{ text:'161', correct : false}
+    ]
+
+},
+{
+    question: "99 * 7 = ?",
+    answers:[
+{ text:'692', correct : false},
+{ text:'693', correct : true},
+{ text:'1234', correct : false},
+{ text:'691', correct : false}
+    ]
+
+},
+{
+    question: "12 * 9 = ?",
+    answers:[
+{ text:'112', correct : false},
+{ text:'106', correct : false},
+{ text:'108', correct : true},
+{ text:'110', correct : false}
+    ]
+
+},
+   
    
 ]
