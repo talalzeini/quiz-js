@@ -62,7 +62,14 @@ body{
    border-radius:30px;
    font-size: 40px;
    animation: 2s fadeIn;
+   transition: background-color 0.5s ease-in-out;
 }
+.btn:hover{
+    background-color: white;
+    transform: scale(1.05);
+    color:black;
+
+ }
 
  .correct{
     background:#80ffaa;
