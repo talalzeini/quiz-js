@@ -80,23 +80,108 @@ while(answerButtonsElement.firstChild){
 
 const questions = [
 {
-    question: "What is 2 + 2",
+    question: "2 + 2 = ?",
     answers:[
 { text:'4', correct : true},
-{ text:'2', correct : false},
-{ text:'2', correct : false},
-{ text:'2', correct : false}
+{ text:'26', correct : false},
+{ text:'3', correct : false},
+{ text:'12', correct : false}
     ]
 
 },
 {
-    question: "What is 5 + 2",
+    question: "5 + 2 = ?",
     answers:[
 { text:'7', correct : true},
 { text:'2', correct : false},
-{ text:'3', correct : false},
-{ text:'4', correct : false}
+{ text:'14', correct : false},
+{ text:'49', correct : false}
     ]
 
-}
+},
+{
+    question: "5 + 3 = ?",
+    answers:[
+{ text:'7', correct : false},
+{ text:'16', correct : false},
+{ text:'88', correct : false},
+{ text:'8', correct : true}
+    ]
+
+},
+{
+    question: "52 * 3 = ?",
+    answers:[
+{ text:'154', correct : false},
+{ text:'156', correct : true},
+{ text:'158', correct : false},
+{ text:'152', correct : false}
+    ]
+
+},
+{
+    question: "51 + 19 = ?",
+    answers:[
+{ text:'75', correct : false},
+{ text:'70', correct : true},
+{ text:'69', correct : false},
+{ text:'68', correct : false}
+    ]
+
+},
+{
+    question: "51 - 19 = ?",
+    answers:[
+{ text:'32', correct : true},
+{ text:'31', correct : false},
+{ text:'33', correct : false},
+{ text:'34', correct : false}
+    ]
+
+},
+
+
+
+{
+    question: "78 * 4 = ?",
+    answers:[
+{ text:'310', correct : false},
+{ text:'314', correct : false},
+{ text:'316', correct : false},
+{ text:'312', correct : true}
+    ]
+
+},
+{
+    question: "52 + 6 = ?",
+    answers:[
+{ text:'60', correct : false},
+{ text:'59', correct : false},
+{ text:'58', correct : true},
+{ text:'100', correct : false}
+    ]
+
+},
+
+{
+    question: "165 / 3 = ?",
+    answers:[
+{ text:'50', correct : false},
+{ text:'55', correct : true},
+{ text:'60', correct : false},
+{ text:'57', correct : false}
+    ]
+
+},
+{
+    question: "78 / 6 = ?",
+    answers:[
+{ text:'14', correct : false},
+{ text:'13', correct : true},
+{ text:'11', correct : false},
+{ text:'12', correct : false}
+    ]
+
+},
+   
 ]
