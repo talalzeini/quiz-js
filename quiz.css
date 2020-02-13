@@ -11,7 +11,7 @@ body{
     justify-content: center;
     height:100vh;
     width:100vw;
-    background:#66b3ff;
+    background:linear-gradient(to top left, #66b3ff,#a3d1ff,#66b3ff);
     background: cover;
     background-size: 100%;
     overflow: hidden;
@@ -27,9 +27,8 @@ body{
     background-color:rgba(1, 1, 1, 0.0);
     border-radius:50px;
     border-color: transparent;
-    animation: 2s fadeIn;
 }
-.btnq{
+.btnquestion{
     background-color:transparent;
     outline:none;
     color: white;
@@ -44,6 +43,7 @@ body{
     font-size: 40px;
     animation: 2s fadeIn;
 }
+
 .btn-grid{
     display:grid;
     gap:15px;
@@ -74,19 +74,17 @@ body{
 .start-btn{
     font-size:2.5rem;
     margin: auto;
-    background-color: #1881e9;
-    width: 300px;
+    background-color: #66b3ff;
     position: absolute;
     top:47%;
     color: white;
-    animation: 2s fadeIn;
     width:400px;
+
 }
 .controls{
     display:flex;
     align-items: center;
     justify-content: center;
-    animation: 2s fadeIn;
 }
 .hide{
     display:none;
@@ -117,20 +115,43 @@ body{
     width:400px;
     animation: 2s fadeIn;
 }
+.restart-btn{
+    font-size:2.5rem;
+    margin: auto;
+    position: fixed;
+    bottom:150px;
+    right: 50px;
+    left: 50px;
+    text-align: center; 
+    align-items: center;
+    justify-content: center;
+    width:400px;
+    animation: 2s fadeIn;
+}
 h1{
     padding:10px 20px;
     border-radius:30px;
+    font-size:2.5rem;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+    background-color:#66b3ff;
+    animation: 2s fadeIn;
+}
+h3{
+    padding:10px 20px;
+    border-radius:30px;
     font-size: 40px;
     font-weight:bold;
     margin: auto;
     width: 400px;
     text-align: center;
-    z-index: 2;
-    background-color: #1881e9;
+    z-index: 1;
+    background-color: #66b3ff;
     animation: 2s fadeIn;
 }
 h2{
-    animation: 2s fadeIn;
+    animation: 0.5s fadeIn;
     padding:10px 20px;
     border-radius:30px;
     font-size: 40px;
@@ -139,7 +160,7 @@ h2{
     z-index: 2;
     width: 400px;
     text-align: center;
-    background-color: #1881e9;
+    background-color: #66b3ff;
 }
 @keyframes fadeIn{
     from{
@@ -157,11 +178,4 @@ opacity: 0.7;
 opacity: 1;
     }
 }
-@keyframes fadeOut{
-    from{
-opacity: 1;
-    }
-    to{
-opacity: 0;
-    }
-}
+
