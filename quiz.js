@@ -1,24 +1,27 @@
 const startButton = document.getElementById('start-btn');
 const nextButton = document.getElementById('next-btn');
 const questionContainerElement = document.getElementById('question-container')
-
+const Restart = document.getElementById('restart-btn');
 const QuizButton = document.getElementById('quiz-button');
 const QuizButton2 = document.getElementById('quiz-button2');
 const contentStart = document.getElementById('content');
+const Options = document.getElementById('quiz-options');
+const questionElement = document.getElementById('question')
+const answerButtonsElement = document.getElementById('answer-buttons')
+let shuffledQuestions, currentQuestionIndex
 
 startButton.addEventListener('click', startGame);
+Restart.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
 currentQuestionIndex++;
 setNextQuestion()
 })
 
-const questionElement = document.getElementById('question')
-const answerButtonsElement = document.getElementById('answer-buttons')
 
-let shuffledQuestions, currentQuestionIndex
 
 function startGame(){ 
 startButton.classList.add('hide');
+Options.classList.add('hide');
 contentStart.classList.add('show');
 QuizButton.classList.add('hide');
 QuizButton2.classList.remove('hide');
@@ -27,13 +30,17 @@ currentQuestionIndex = 0;
 questionContainerElement.classList.remove('hide');
 setNextQuestion()
 }
+
+
+
 function setNextQuestion()
 {
 resetState()
 showQuestion(shuffledQuestions[currentQuestionIndex])
 }
-function selectAnswer(e){
 
+
+function selectAnswer(e){
 const selectedButton = e.target
 const correct = selectedButton.dataset.correct
 setStatusClass(document.body, correct)
@@ -43,10 +50,13 @@ Array.from(answerButtonsElement.children).forEach(button =>{
 if(shuffledQuestions.length > currentQuestionIndex +1){
 nextButton.classList.remove('hide');
 }else{
-    startButton.innerText = 'Restart'
-    startButton.classList.remove('hide')
+  
+    Restart.classList.remove('hide')
 }
 }
+
+
+
 
 function setStatusClass(element, correct){
     clearStatusClass(element)
@@ -74,6 +84,10 @@ question.answers. forEach(answer => {
     answerButtonsElement.appendChild(button)
 })
 }
+
+
+
+
 
 
 function resetState(){
@@ -289,7 +303,7 @@ const questions = [
 { text:'110', correct : false}
     ]
 
-},
+}
    
    
 ]
