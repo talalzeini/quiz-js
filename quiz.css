@@ -88,6 +88,14 @@ body{
     width:400px;
 
 }
+.options{
+
+    font-size:2.5rem;
+    margin: auto;
+    background-color: #66b3ff;
+    color: white;
+    width:400px;  
+}
 .controls{
     display:flex;
     align-items: center;
@@ -168,6 +176,18 @@ h2{
     width: 400px;
     text-align: center;
     background-color: #66b3ff;
+}
+h4{
+        animation: 0.5s fadeIn;
+        padding:10px 20px;
+        border-radius:30px;
+        font-size: 40px;
+        font-weight:bold;
+        margin: auto;
+        z-index: 2;
+        width: 400px;
+        text-align: center;
+        background-color: #66b3ff;
 }
 @keyframes fadeIn{
     from{

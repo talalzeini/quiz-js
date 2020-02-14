@@ -7,6 +7,7 @@ const QuizButton2 = document.getElementById('quiz-button2');
 const contentStart = document.getElementById('content');
 const Options = document.getElementById('quiz-options');
 const questionElement = document.getElementById('question')
+var Header = document.getElementById('headerf')
 const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
@@ -42,18 +43,22 @@ showQuestion(shuffledQuestions[currentQuestionIndex])
 
 function selectAnswer(e){
 const selectedButton = e.target
+let a = 0;
 const correct = selectedButton.dataset.correct
 setStatusClass(document.body, correct)
 Array.from(answerButtonsElement.children).forEach(button =>{
     setStatusClass(button, button.dataset.correct)
-    button.disabled = true;
+    button.disabled = true;  
+    Header.innerText = a;
 })
 if(shuffledQuestions.length > currentQuestionIndex +1){
 nextButton.classList.remove('hide');
+a++;
 }else{
     Restart.classList.remove('hide')
 }
 }
+
 
 
 
@@ -303,7 +308,17 @@ const questions = [
 { text:'110', correct : false}
     ]
 
+},
+{
+    question: "140 * 9 = ?",
+    answers:[
+{ text:'1260', correct : true},
+{ text:'1300', correct : false},
+{ text:'1280', correct : false},
+{ text:'1240', correct : false}
+    ]
+
 }
-   
+      
    
 ]
