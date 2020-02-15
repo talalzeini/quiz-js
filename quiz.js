@@ -320,7 +320,7 @@ const questions = [
 
 },
 {
-    question: "150 * 3 = ?",
+    question: "150 / 3 = ?",
     answers:[
 { text:'50', correct : true},
 { text:'100', correct : false},
@@ -378,7 +378,7 @@ const questions = [
 { text:'140', correct : false}
     ]
 
-},
+}
          
    
 ]
