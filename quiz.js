@@ -318,7 +318,67 @@ const questions = [
 { text:'1240', correct : false}
     ]
 
-}
-      
+},
+{
+    question: "150 * 3 = ?",
+    answers:[
+{ text:'50', correct : true},
+{ text:'100', correct : false},
+{ text:'75', correct : false},
+{ text:'25', correct : false}
+    ]
+
+},
+{
+    question: "7 * 9 = ?",
+    answers:[
+{ text:'63', correct : true},
+{ text:'64', correct : false},
+{ text:'65', correct : false},
+{ text:'66', correct : false}
+    ]
+
+},
+{
+    question: "68 * 5 = ?",
+    answers:[
+{ text:'320', correct : false},
+{ text:'325', correct : false},
+{ text:'340', correct : true},
+{ text:'330', correct : false}
+    ]
+
+},
+{
+    question: "58 * 3 = ?",
+    answers:[
+{ text:'178', correct : false},
+{ text:'176', correct : false},
+{ text:'172', correct : false},
+{ text:'174', correct : true}
+    ]
+
+},
+{
+    question: "98 * 7 = ?",
+    answers:[
+{ text:'684', correct : false},
+{ text:'690', correct : false},
+{ text:'686', correct : true},
+{ text:'688', correct : false}
+    ]
+
+},
+{
+    question: "15 * 9 = ?",
+    answers:[
+{ text:'135', correct : true},
+{ text:'130', correct : false},
+{ text:'125', correct : false},
+{ text:'140', correct : false}
+    ]
+
+},
+         
    
 ]
