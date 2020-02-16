@@ -8,13 +8,19 @@ const contentStart = document.getElementById('content');
 const Options = document.getElementById('quiz-options');
 const questionElement = document.getElementById('question')
 var Header = document.getElementById('headerf')
+var number = document.getElementById('nb')
 const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
+
+
+let a = 1;
 startButton.addEventListener('click', startGame);
 Restart.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
 currentQuestionIndex++;
+a++;
+number.innerText = a;
 setNextQuestion()
 })
 
@@ -22,6 +28,7 @@ setNextQuestion()
 
 function startGame(){ 
 startButton.classList.add('hide');
+Restart.classList.add('hide');
 Options.classList.add('hide');
 contentStart.classList.add('show');
 QuizButton.classList.add('hide');
@@ -29,6 +36,10 @@ QuizButton2.classList.remove('hide');
 shuffledQuestions = questions.sort(() => Math.random() - .5);
 currentQuestionIndex = 0;
 questionContainerElement.classList.remove('hide');
+number.innerText = 1;
+Header.innerText = 0;
+a = 1;
+b = 0;
 setNextQuestion()
 }
 
@@ -37,23 +48,32 @@ setNextQuestion()
 function setNextQuestion()
 {
 resetState()
+
 showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
+let b = 0;
 
 function selectAnswer(e){
+    
+   
 const selectedButton = e.target
-let a = 0;
 const correct = selectedButton.dataset.correct
 setStatusClass(document.body, correct)
 Array.from(answerButtonsElement.children).forEach(button =>{
     setStatusClass(button, button.dataset.correct)
-    button.disabled = true;  
-    Header.innerText = a;
+    button.disabled = true; 
+   
+if(correct){
+    b++;
+    Header.innerText = b/4;
+    number.innerText = a;
+}
+
+       
 })
 if(shuffledQuestions.length > currentQuestionIndex +1){
 nextButton.classList.remove('hide');
-a++;
 }else{
     Restart.classList.remove('hide')
 }
@@ -94,7 +114,6 @@ question.answers. forEach(answer => {
 
 
 
-
 function resetState(){
 clearStatusClass(document.body)
 nextButton.classList.add('hide')
@@ -104,7 +123,8 @@ while(answerButtonsElement.firstChild){
 }
 }
 
-const questions = [
+
+const questions = [    
 {
     question: "2 + 2 = ?",
     answers:[
@@ -113,6 +133,7 @@ const questions = [
 { text:'3', correct : false},
 { text:'12', correct : false}
     ]
+    
 
 },
 {
