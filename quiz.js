@@ -399,7 +399,39 @@ const questions = [
 { text:'140', correct : false}
     ]
 
+},
+{
+    question: "88 * 3 = ?",
+    answers:[
+{ text:'260', correct : false},
+{ text:'262', correct : false},
+{ text:'264', correct : true},
+{ text:'266', correct : false}
+    ]
+
+},
+{
+    question: "264 / 4 = ?",
+    answers:[
+{ text:'62', correct : false},
+{ text:'64', correct : false},
+{ text:'68', correct : false},
+{ text:'66', correct : true}
+    ]
+
+},
+{
+    question: "66 * 4 = ?",
+    answers:[
+{ text:'250', correct : false},
+{ text:'246', correct : false},
+{ text:'244', correct : false},
+{ text:'248', correct : true}
+    ]
+
 }
+        
+        
          
    
 ]
