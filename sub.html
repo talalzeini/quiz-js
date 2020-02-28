@@ -4,12 +4,13 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="options.css" type="text/css" rel="stylesheet">
+    <link href="quiz.css" type="text/css" rel="stylesheet">
     <title>Simple Quiz</title>
 </head>
 
 <body>
-    <h2 id="quiz-button2"  class="header hide" style= "color:white; position:absolute; top:50px; font-size: 40px; font-weight: normal;">QUIZ</h2>
+    <h1 id="quiz-button" style= "color:white; position:absolute; top:270px;  font-weight: normal;">Difference</h1>
+    <h2 id="quiz-button2"  class="header hide" style= "color:white; position:absolute; top:50px; font-size: 40px; font-weight: normal;">Addition</h2>
    
        <div id="content" class="container">
       
@@ -31,15 +32,14 @@
 
                             <div class="controls">
                 
-                                        <button  onclick="window.location.href = 'sum.html'" class=" btn " style="position: absolute; top: 150px;">Addition</button>
-                                        <button  onclick="window.location.href = 'sub.html'" class=" btn " style="position: absolute; top: 250px;">Difference</button>
-                                        <button   class=" btn " style="position: absolute; top: 350px;">Product</button>
-                                        <button  class=" btn " style="position: absolute; top: 450px;">Division</button>
+                                        <button id="start-btn" class="start-btn btn ">Start</button>
+                                        <button id="next-btn" class="next-btn btn hide">Next</button>
+                                        <button id="restart-btn" class="restart-btn btn hide">Restart</button>
                             </div>
-                            <button  onclick="window.location.href = 'quiz.html'" id="back-button" class="btn" style= "color:black; position:absolute; top:580px; width:200px; font-weight: normal;">BACK</button>
+                            <button onclick="window.location.href = 'options.html'" id="quiz-options" class ="options btn" style= " position:absolute; top:580px; font-size: 40px; font-weight: normal;">Options</button>
                             
        </div>
-       <script  src="quiz.js"></script>
+       <script  src="sub.js"></script>
 </body>
 
 
