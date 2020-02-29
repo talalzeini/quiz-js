@@ -172,5 +172,51 @@ const questions = [
 { text:'28', correct : false},
 { text:'27', correct : false}
     ]
+},
+{
+    question: "47 - 19 = ?",
+    answers:[
+{ text:'28', correct : true},
+{ text:'31', correct : false},
+{ text:'29', correct : false},
+{ text:'34', correct : false}
+    ]
+},
+{
+    question: "46 - 19 = ?",
+    answers:[
+{ text:'27', correct : true},
+{ text:'30', correct : false},
+{ text:'28', correct : false},
+{ text:'26', correct : false}
+    ]
+},
+{
+    question: "26 - 12 = ?",
+    answers:[
+{ text:'12', correct : false},
+{ text:'11', correct : false},
+{ text:'14', correct : true},
+{ text:'13', correct : false}
+    ]
+},
+{
+    question: "20 - 12 = ?",
+    answers:[
+{ text:'9', correct : false},
+{ text:'11', correct : false},
+{ text:'8', correct : true},
+{ text:'10', correct : false}
+    ]
+},
+{
+    question: "18 - 12 = ?",
+    answers:[
+{ text:'5', correct : false},
+{ text:'3', correct : false},
+{ text:'6', correct : true},
+{ text:'2', correct : false}
+    ]
 }
+
 ]
