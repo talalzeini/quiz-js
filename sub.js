@@ -217,6 +217,69 @@ const questions = [
 { text:'6', correct : true},
 { text:'2', correct : false}
     ]
+},
+{
+    question: "20 - 13 = ?",
+    answers:[
+{ text:'9', correct : false},
+{ text:'8', correct : false},
+{ text:'7', correct : true},
+{ text:'6', correct : false}
+    ]
+},
+{
+    question: "20 - 14 = ?",
+    answers:[
+{ text:'9', correct : false},
+{ text:'8', correct : false},
+{ text:'6', correct : true},
+{ text:'6', correct : false}
+    ]
+},
+{
+    question: "20 - 15 = ?",
+    answers:[
+{ text:'7', correct : false},
+{ text:'5', correct : true},
+{ text:'4', correct : false},
+{ text:'6', correct : false}
+    ]
+},
+{
+    question: "21 - 16 = ?",
+    answers:[
+{ text:'6', correct : false},
+{ text:'4', correct : false},
+{ text:'5', correct : true},
+{ text:'7', correct : false}
+    ]
+},
+{
+    question: "2 - 1 = ?",
+    answers:[
+{ text:'4', correct : false},
+{ text:'3', correct : false},
+{ text:'2', correct : false},
+{ text:'1', correct : true}
+    ]
+},
+{
+    question: "3 - 1 = ?",
+    answers:[
+{ text:'2', correct : true},
+{ text:'3', correct : false},
+{ text:'4', correct : false},
+{ text:'1', correct : false}
+    ]
+},
+{
+    question: "6 - 2 = ?",
+    answers:[
+{ text:'1', correct : false},
+{ text:'4', correct : true},
+{ text:'3', correct : false},
+{ text:'2', correct : false}
+    ]
 }
 
 ]
