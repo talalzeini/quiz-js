@@ -124,6 +124,10 @@ while(answerButtonsElement.firstChild){
 }
 
 
+
+
+
+
 const questions = [    
 {
     question: "2 + 2 = ?",

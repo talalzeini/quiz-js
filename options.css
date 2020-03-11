@@ -52,10 +52,9 @@ body{
 }
 
 .btn{
-   max-width: 50%;
+   
    background-color:  #ffb84d;
    outline:none;
-   width:800px;
    margin: auto;
    border-color: transparent;
    padding:10px 20px;
@@ -208,3 +207,68 @@ opacity: 1;
     }
 }
 
+
+
+
+
+
+
+
+@-webkit-keyframes fadeLeft{
+	from{
+opacity:0;
+-webkit-transform:translate3d(-200%, 0, 0);
+transform: translate3d(-200%, 0, 0);
+	}
+	to{
+opacity:1;
+-webkit-transform:none;
+transform:none;
+	}
+}
+@keyframes fadeLeft{
+	from{
+opacity:0;
+-webkit-transform:translate3d(-200%, 0, 0);
+transform: translate3d(-200%, 0, 0);
+	}
+	to{
+opacity:1;
+-webkit-transform:none;
+transform:none;
+	}
+}
+.fadeLeft{
+	-webkit-animation-name:fadeLeft;
+      animation-name:fadeLeft; 
+      animation: 3s fadeLeft;
+}
+@-webkit-keyframes fadeRight{
+from{
+opacity:0;
+-webkit-transform:translate3d(200%, 0, 0);
+transform: translate3d(200%, 0, 0);
+}
+to{
+opacity:1;
+-webkit-transform:none;
+transform:none;
+}
+}
+@keyframes fadeRight{
+	from{
+opacity:0;
+-webkit-transform:translate3d(200%, 0, 0);
+transform: translate3d(200%, 0, 0);
+	}
+	to{
+opacity:1;
+-webkit-transform:none;
+transform:none;
+	}
+}
+.fadeRight{
+-webkit-animation-name:fadeRight;
+animation-name:fadeRight; 
+animation: 3s fadeRight;   
+}
