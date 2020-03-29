@@ -1,9 +1,9 @@
+
 *, *::before, *, *::after {
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
-
 }
-body{
+.firstBody{
     padding:0;
     margin:0;
     display:flex;
@@ -17,13 +17,21 @@ body{
     background-size: 100%;
     overflow: hidden;
 }
-#menu{
-    color:white; 
-    position:absolute;
-     bottom: 220px; 
-     font-size: 40px; 
-     font-weight: normal;
+.secondBody{
+    padding:0;
+    margin:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    overflow: hidden;
+    width:100vw;
+    background:linear-gradient(to top left, #ffad99, #66b3ff,#80ffaa);
+    background: cover;
+    background-size: 100%;
+    overflow: hidden;
 }
+
 .container{
     width:500px;
     height: 500px;
@@ -45,10 +53,70 @@ body{
     align-items: center;
     justify-content: center;
     border-color: transparent;
-    padding:10px 20px;
+    padding:5px 20px;
     border-radius:30px;
     font-size: 40px;
     animation: 2s fadeIn;
+}
+.menu{
+    background-color:transparent;
+    outline:none;
+    color: white;
+    width:300px;
+    position: absolute;
+    bottom:300px;
+    justify-content: center;
+    border-color: transparent;
+    padding:5px 20px;
+    border-radius:30px;
+    font-size: 40px;
+    animation: 2s fadeIn;
+    max-width: 50%;
+    outline:none;
+    margin: auto;
+    background-color: #66b3ff;
+}
+
+.results{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .score{
+    background-color:transparent;
+    outline:none;
+    color: white;
+    width:350px;
+    position: absolute;
+    bottom:400px;
+    justify-content: center;
+    border-color: transparent;
+    padding:5px 20px;
+    border-radius:30px;
+    font-size: 40px;
+    animation: 2s fadeIn;
+    max-width: 50%;
+    outline:none;
+    margin: auto;
+    background-color: #66b3ff;
+}
+.sucess{
+    background-color:transparent;
+    outline:none;
+    color: white;
+    width:300px;
+    position: absolute;
+    bottom:500px;
+    justify-content: center;
+    border-color: transparent;
+    padding:5px 20px;
+    border-radius:30px;
+    font-size: 40px;
+    animation: 2s fadeIn;
+    max-width: 50%;
+    outline:none;
+    margin: auto;
+    background-color: #66b3ff;
 }
 
 .btn-grid{
@@ -57,7 +125,6 @@ body{
     margin: 15px 0;
     animation: 2s fadeIn;
 }
-
 .btn{
    max-width: 50%;
    background-color: #66b3ff;
@@ -75,12 +142,9 @@ body{
     background-color: white;
     transform: scale(1.05);
     color:black;
-
- }
-
- .correct{
+}
+.correct{
     background:#80ffaa;
-    animation: 2s fadeInFast;
 }
 .wrong{
     background:#ffad99;
@@ -92,13 +156,15 @@ body{
     position: absolute;
     top:350px;
     color: white;
-    width:400px;
+    width:300px;
 }
 .options{
  
+   position:absolute;
+   top:480px;  font-weight: normal;
    background-color: #66b3ff;
    outline:none;
-   width:200px;
+   width:300px;
    margin: auto;
    color:white;
    border-color: transparent;
@@ -127,7 +193,6 @@ body{
     border-radius:50px;
     border-color: transparent;
     animation: 2s fadeIn;
-
 }
 .next-btn{
     font-size:2.5rem;
@@ -143,28 +208,37 @@ body{
     animation: 2s fadeIn;
 }
 .restart-btn{
-    font-size:2.5rem;
-    margin: auto;
-    position: fixed;
-    bottom:50px;
-    right: 50px;
-    left: 50px;
-    text-align: center; 
-    align-items: center;
+    background-color:transparent;
+    outline:none;
+    color: white;
+    width:300px;
+    position: absolute;
+    bottom:200px;
     justify-content: center;
-    width:400px;
+    border-color: transparent;
+    padding:5px 20px;
+    border-radius:30px;
+    font-size: 40px;
     animation: 2s fadeIn;
+    max-width: 50%;
+    outline:none;
+    margin: auto;
+    background-color: #66b3ff;
 }
 h1{
     padding:10px 20px;
     border-radius:30px;
     font-size:2.5rem;
     margin: auto;
-    width: 400px;
-    top:50px;
+    width: 300px;
+    top:200px;
     text-align: center;
     background-color:#66b3ff;
     animation: 2s fadeIn;
+    color:white;
+    position:absolute; 
+    top:200px;  
+    font-weight: normal;
 }
 h3{
     padding:10px 20px;
@@ -190,17 +264,17 @@ h2{
     background-color: #66b3ff;
     color:white; 
     position:absolute; 
-    top:5px; 
+    top:75px; 
     font-weight: normal;
 }
-
 h4{
     animation: 0.5s fadeIn;
-    padding:10px 20px;
+    padding:5px 20px;
     border-radius:30px;
-    font-size: 50px;
-    font-weight:bold;
-    margin: auto;
+    font-size: 32px;
+    font-weight:normal;
+    color: white;
+    margin: 5px auto;
     display: block;
     z-index: 2;
     width: 150px;
@@ -223,11 +297,6 @@ opacity: 0.7;
 opacity: 1;
     }
 }
-
-
-
-
-
 @-webkit-keyframes fadeLeft{
 	from{
 opacity:0;
@@ -288,308 +357,14 @@ animation: 3s fadeRight;
 }
 
 
-@media only screen and (min-width: 375px){
-
-html{
-    overflow: hidden;
-}
-    body{
-        padding:0;
-        margin:0;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        height:100vh;
-        width:100vw;
-        overflow: hidden;
-        background:linear-gradient(to top left, #66b3ff,#a3d1ff,#66b3ff) no-repeat;
-        background: cover;
-        background-size: 100%;
-        overflow: hidden;
-    }
-   
-    #menuBut{
-        color: white;
-        font-size:1.5rem;
-        margin: auto;
-        position: fixed;
-        bottom:75px; 
-        right: 50px;
-        left: 50px;
-        text-align: center; 
-        align-items: center;
-        justify-content: center;
-        width:200px;
-        animation: 2s fadeIn;
-        max-width: 50%;
-        outline:none;
-       border: none;
-       border-color: transparent;
-       border-radius:30px;
-       background-color: #66b3ff;
-    }
-    .container{
-        width:500px;
-        height: 500px;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        max-width:90%;
-        background-color:rgba(1, 1, 1, 0.0);
-        border-radius:50px;
-        border-color: transparent;
-    }
-    .btnquestion{
-        background-color:transparent;
-        outline:none;
-        color: white;
-        width:800px;
-        margin: auto;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        border-color: transparent;
-        padding:10px 20px;
-        border-radius:30px;
-        font-size: 32px;
-        animation: 2s fadeIn;
-    }
-    
-    .btn-grid{
-        display:grid;
-        gap:15px;
-        margin: 15px 0;
-        animation: 2s fadeIn;
-    }
-    
-    .btn{
-       max-width: 50%;
-       background-color: #66b3ff;
-       outline:none;
-       width:200px;
-       margin: auto;
-       border-color: transparent;
-       padding:1px 10px;
-       border-radius:30px;
-       font-size: 32px;
-       animation: 2s fadeIn;
-       transition: background-color 0.5s ease-in-out;
-    }
-    .btn:hover{
-        background-color: white;
-        transform: scale(1.05);
-        color:black;
-    
-     }
-    
-     .correct{
-        background:#80ffaa;
-        animation: 2s fadeInFast;
-    }
-    .wrong{
-        background:#ffad99;
-    }
-    .start-btn{
-        font-size:2.5rem;
-        margin: auto;
-        background-color: #66b3ff;
-        position: absolute;
-        top:350px;
-        color: white;
-        width:400px;
-    }
-    .options{
-     
-       background-color: #66b3ff;
-       outline:none;
-       width:200px;
-       margin: auto;
-       color:white;
-       border-color: transparent;
-       padding:10px 20px;
-       border-radius:30px;
-       font-size: 40px;
-       animation: 2s fadeIn;
-       transition: background-color 0.5s ease-in-out;
-    }
-    .controls{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .hide{
-        display:none;
-    }
-    .show{
-        width:300px;
-        height: 400px;
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        max-width:90%;
-        background-color:rgba(1, 1, 1, 0.5);
-        border-radius:50px;
-        border-color: transparent;
-        margin-bottom: 60px;
-        animation: 2s fadeIn;
-    
-    }
-    .next-btn{
-        font-size:1.5rem;
-        margin: auto;
-        position: fixed;
-        bottom:23px; 
-        right: 50px;
-        left: 50px;
-        text-align: center; 
-        align-items: center;
-        justify-content: center;
-        width:200px;
-        animation: 2s fadeIn;
-    }
-    .restart-btn{
-        font-size:1.5rem;
-        margin: auto;
-        position: fixed;
-        bottom:23px;
-        right: 50px;
-        left: 50px;
-        text-align: center; 
-        align-items: center;
-        justify-content: center;
-        width:200px;
-        animation: 2s fadeIn;
-    }
-    h1{
-        padding:10px 20px;
-        border-radius:30px;
-        font-size:2.5rem;
-        margin: 10px auto;
-        width: 300px;
-        text-align: center;
-        background-color:#66b3ff;
-        animation: 2s fadeIn;
-    }
-    h3{
-        padding:10px 20px;
-        border-radius:30px;
-        font-size: 40px;
-        font-weight:bold;
-        margin: auto;
-        width: 400px;
-        text-align: center;
-        z-index: 1;
-        background-color: #66b3ff;
-        animation: 2s fadeIn;
-    }
-    h2{
-        animation: 0.5s fadeIn;
-        padding:10px 20px;
-        border-radius:30px;
-        font-size: 23px;
-        z-index: 2;
-        width: 200px;
-        text-align: center;
-        background-color: #66b3ff;
-        color:white; 
-        font-weight: normal;
-        top:50px;
-        position: absolute;
-    }
-    
-    h4:not(#menu){
-        animation: 0.5s fadeIn;
-        padding:5px 20px;
-        border-radius:30px;
-        font-size: 32px;
-        font-weight:bold;
-        margin: auto;
-        display: block;
-        z-index: 2;
-        width: 100px;
-        text-align: center;
-        background-color: #66b3ff;
-    }
-    @keyframes fadeIn{
-        from{
-    opacity: 0;
-        }
-        to{
-    opacity: 1;
-        }
-    }
-    @keyframes fadeInFast{
-        from{
-    opacity: 0.7;
-        }
-        to{
-    opacity: 1;
-        }
-    }
-    
-    
-    
-    
-    
-    @-webkit-keyframes fadeLeft{
-        from{
-    opacity:0;
-    -webkit-transform:translate3d(-200%, 0, 0);
-    transform: translate3d(-200%, 0, 0);
-        }
-        to{
-    opacity:1;
-    -webkit-transform:none;
-    transform:none;
-        }
-    }
-    @keyframes fadeLeft{
-        from{
-    opacity:0;
-    -webkit-transform:translate3d(-200%, 0, 0);
-    transform: translate3d(-200%, 0, 0);
-        }
-        to{
-    opacity:1;
-    -webkit-transform:none;
-    transform:none;
-        }
-    }
-    .fadeLeft{
-        -webkit-animation-name:fadeLeft;
-          animation-name:fadeLeft; 
-          animation: 3s fadeLeft;
-    }
-    @-webkit-keyframes fadeRight{
-    from{
-    opacity:0;
-    -webkit-transform:translate3d(200%, 0, 0);
-    transform: translate3d(200%, 0, 0);
-    }
-    to{
-    opacity:1;
-    -webkit-transform:none;
-    transform:none;
-    }
-    }
-    @keyframes fadeRight{
-        from{
-    opacity:0;
-    -webkit-transform:translate3d(200%, 0, 0);
-    transform: translate3d(200%, 0, 0);
-        }
-        to{
-    opacity:1;
-    -webkit-transform:none;
-    transform:none;
-        }
-    }
-    .fadeRight{
-    -webkit-animation-name:fadeRight;
-    animation-name:fadeRight; 
-    animation: 3s fadeRight;   
-    }
 
 
 
-}
+
+
+
+
+
+
+
+

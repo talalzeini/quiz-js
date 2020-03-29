@@ -6,27 +6,36 @@ const QuizButton = document.getElementById('quiz-button');
 const QuizButton2 = document.getElementById('quiz-button2');
 const contentStart = document.getElementById('content');
 const Options = document.getElementById('quiz-options');
+const body = document.getElementById('body');
+const numberOfQuestions = document.getElementById("numberOfQuestions");
 const questionElement = document.getElementById('question')
-var Header = document.getElementById('headerf')
-var number = document.getElementById('nb')
+const sucess = document.getElementById('sucess')
+var score = document.getElementById('score')
+var any = 1;
+var results = document.getElementById('results');
+
+
+
+ 
 const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
 
-
-let a = 1;
 startButton.addEventListener('click', startGame);
 Restart.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
 currentQuestionIndex++;
-a++;
-number.innerText = a;
+any++;
+numberOfQuestions.innerText = any; 
 setNextQuestion()
 })
 
 
-
 function startGame(){ 
+body.classList.remove('correct')
+body.classList.remove('wrong')
+body.classList.add('secondBody');
+body.classList.remove('firstBody');
 startButton.classList.add('hide');
 Restart.classList.add('hide');
 Options.classList.add('hide');
@@ -36,19 +45,19 @@ QuizButton2.classList.remove('hide');
 shuffledQuestions = questions.sort(() => Math.random() - .5);
 currentQuestionIndex = 0;
 questionContainerElement.classList.remove('hide');
-number.innerText = 1;
-Header.innerText = 0;
-a = 1;
+score.innerText = 0;
+Restart.classList.add('hide')
+results.classList.add('hide');
+contentStart.classList.remove('hide');
+contentStart.classList.add('show');
+any = 1;
 b = 0;
 setNextQuestion()
 }
 
-
-
 function setNextQuestion()
 {
 resetState()
-
 showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
@@ -63,11 +72,11 @@ setStatusClass(document.body, correct)
 Array.from(answerButtonsElement.children).forEach(button =>{
     setStatusClass(button, button.dataset.correct)
     button.disabled = true; 
-   
 if(correct){
+    
     b++;
-    Header.innerText = b/4;
-    number.innerText = a;
+    score.innerText = b/4 + " out of 5 ";
+  
 }
 
        
@@ -76,9 +85,23 @@ if(shuffledQuestions.length > currentQuestionIndex +1){
 nextButton.classList.remove('hide');
 }else{
     Restart.classList.remove('hide')
+    results.classList.remove('hide');
+    contentStart.classList.add('hide');
+    contentStart.classList.remove('show');
+    if((b/4)  <= 2.5){
+        sucess.innerHTML = "Failure";
+        body.classList.remove('correct')
+        body.classList.add('wrong')
+        console.log("lose")
+    }else if((b/4) > 2.5){
+        console.log("win")
+        sucess.innerHTML = "Sucess";
+        body.classList.add('correct')
+        body.classList.remove('wrong')
+    }
+    
 }
 }
-
 
 
 

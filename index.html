@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="quiz.css" type="text/css" rel="stylesheet">
     <title>Simple Quiz</title>
 </head>
 
-<body>
-    <h1 id="quiz-button" class="fadeLeft"style= " color:white; position:absolute; top:200px;  font-weight: normal; width:200px;">QUIZ</h1>
-    <h2 id="quiz-button2"  class="header hide">QUIZ</h2>
-   
-       <div id="content" class="container">
-      
-                <div id="question-container" class="hide">
-                    <h4 id = "headerf" style= "color:white;  bottom: 150px; font-size: 32px; font-weight: normal;" ">0</h4>
-                    <h4 style= "color:white; position:absolute; bottom: 150px; font-size: 32px; font-weight: normal;">Q<span id = "nb">1</span></h4>
-                    <button  onclick="window.location.href = 'index.html'" id="menuBut">MENU</button>
-                   
-               
-                    <button id="question" class="btnquestion">Question</button>
-
-                    <div id="answer-buttons" class="btn-grid">
-                            <button class="btn">Answer 1</button>
-                            <button  class="btn">Answer 2</button>
-                            <button  class="btn">Answer 3</button>
-                            <button " class="btn">Answer 4</button>
-                           
-                    </div>
-                </div>
+<body id="body" class="firstBody">
+        <h1 id="quiz-button" class="fadeLeft">QUIZ</h1>
+        <h2 id="quiz-button2"  class="header hide">RANDOM</h2> 
+    <div id="results" class="results hide"> 
+        <button id="menu" onclick="reload()" class="menu">Menu</button>  
+        <button id="score" class="score">Score</button>  
+        <button id="sucess" class="sucess">Result</button> 
+        <button id="restart-btn" class="restart-btn fadeRight">Restart</button>
+    </div>   
     
+        <div id="content" class="container">
+        
+                    <div id="question-container" class="hide">
+                                <h4 id = "numberOfQuestions">1</h4>
+ 
+                                <button id="question" class="btnquestion">Question</button>
 
-                            <div class="controls">
-                                   
-                                        <button id="start-btn" class="start-btn btn fadeRight ">Start</button>
-                                        <button id="next-btn" class="next-btn btn hide fadeLeft">Next</button>
-                                        <button id="restart-btn" class="restart-btn btn hide fadeRight">Restart</button>
-                            </div>
-                            <button onclick="window.location.href = 'options.html'" id="quiz-options" class ="options fadeRight" style= " position:absolute; top:480px; font-size: 40px; font-weight: normal; ">Options</button>
-                            
-       </div>
-       <script  src="quiz.js"></script>
-</body>
+                                <div id="answer-buttons" class="btn-grid">
+                                        <button class="btn">Answer 1</button>
+                                        <button  class="btn">Answer 2</button>
+                                        <button  class="btn">Answer 3</button>
+                                        <button  class="btn">Answer 4</button>
+                                    
+                                </div>
+                    </div>
+        
 
-
+                                <div class="controls">
+                                            <button id="start-btn" class="start-btn btn fadeRight ">Start</button>
+                                            <button id="next-btn" class="next-btn btn hide fadeLeft" onclick="addQuestion()">Next</button>
+                                            
+                                </div>
+                                <button onclick="window.location.href = 'options.html'" id="quiz-options" class ="options fadeRight">Options</button>
+                                
+        </div>
+ 
+        <script  src="quiz.js"></script>
+    </body>
 </html>

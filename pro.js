@@ -6,27 +6,36 @@ const QuizButton = document.getElementById('quiz-button');
 const QuizButton2 = document.getElementById('quiz-button2');
 const contentStart = document.getElementById('content');
 const Options = document.getElementById('quiz-options');
+const body = document.getElementById('body');
+const numberOfQuestions = document.getElementById("numberOfQuestions");
 const questionElement = document.getElementById('question')
-var Header = document.getElementById('headerf')
-var number = document.getElementById('nb')
+const sucess = document.getElementById('sucess')
+var score = document.getElementById('score')
+var any = 1;
+var results = document.getElementById('results');
+
+
+
+ 
 const answerButtonsElement = document.getElementById('answer-buttons')
 let shuffledQuestions, currentQuestionIndex
 
 
-
-let a = 1;
 startButton.addEventListener('click', startGame);
 Restart.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
 currentQuestionIndex++;
-a++;
-number.innerText = a;
+any++;
+numberOfQuestions.innerText = any; 
 setNextQuestion()
 })
 
 
-
 function startGame(){ 
+body.classList.remove('correct')
+body.classList.remove('wrong')
+body.classList.add('secondBody');
+body.classList.remove('firstBody');
 startButton.classList.add('hide');
 Restart.classList.add('hide');
 Options.classList.add('hide');
@@ -36,19 +45,19 @@ QuizButton2.classList.remove('hide');
 shuffledQuestions = questions.sort(() => Math.random() - .5);
 currentQuestionIndex = 0;
 questionContainerElement.classList.remove('hide');
-number.innerText = 1;
-Header.innerText = 0;
-a = 1;
+score.innerText = 0;
+Restart.classList.add('hide')
+results.classList.add('hide');
+contentStart.classList.remove('hide');
+contentStart.classList.add('show');
+any = 1;
 b = 0;
 setNextQuestion()
 }
 
-
-
 function setNextQuestion()
 {
 resetState()
-
 showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
@@ -63,11 +72,11 @@ setStatusClass(document.body, correct)
 Array.from(answerButtonsElement.children).forEach(button =>{
     setStatusClass(button, button.dataset.correct)
     button.disabled = true; 
-   
 if(correct){
+    
     b++;
-    Header.innerText = b/4;
-    number.innerText = a;
+    score.innerText = b/4 + " out of 20 ";
+  
 }
 
        
@@ -76,9 +85,23 @@ if(shuffledQuestions.length > currentQuestionIndex +1){
 nextButton.classList.remove('hide');
 }else{
     Restart.classList.remove('hide')
+    results.classList.remove('hide');
+    contentStart.classList.add('hide');
+    contentStart.classList.remove('show');
+    if((b/4)  <= 10){
+        sucess.innerHTML = "Failure";
+        body.classList.remove('correct')
+        body.classList.add('wrong')
+        console.log("lose")
+    }else if((b/4) > 10){
+        console.log("win")
+        sucess.innerHTML = "Sucess";
+        body.classList.add('correct')
+        body.classList.remove('wrong')
+    }
+    
 }
 }
-
 
 
 
@@ -124,10 +147,11 @@ while(answerButtonsElement.firstChild){
 }
 
 
+
 const questions = [    
 {
 
-
+// question 1
     question: "52 * 3 = ?",
     answers:[
 { text:'154', correct : false},
@@ -139,81 +163,87 @@ const questions = [
 },
 
 
-
+// question 2
 {
     question: "78 * 4 = ?",
     answers:[
 { text:'310', correct : false},
-{ text:'314', correct : false},
+{ text:'312', correct : true},
 { text:'316', correct : false},
-{ text:'312', correct : true}
+{ text:'313', correct : false}
     ]
 
 },
 
 
-
+// question 3
 {
     question: "20 * 11 = ?",
     answers:[
 { text:'210', correct : false},
-{ text:'211', correct : false},
 { text:'220', correct : true},
+{ text:'211', correct : false},
 { text:'230', correct : false}
     ]
 
 },
+// question 4
 {
     question: "8 * 65 = ?",
     answers:[
-{ text:'515', correct : false},
 { text:'510', correct : false},
 { text:'520', correct : true},
+{ text:'515', correct : false},
 { text:'525', correct : false}
     ]
 
 },
 
+// question 5
 {
     question: "45 * 6 = ?",
     answers:[
-{ text:'265', correct : false},
 { text:'260', correct : false},
 { text:'270', correct : true},
+{ text:'265', correct : false},
 { text:'275', correct : false}
     ]
 
 },
+// question 6
 {
     question: "26 * 6 = ?",
     answers:[
-{ text:'146', correct : false},
 { text:'156', correct : true},
+{ text:'146', correct : false},
 { text:'153', correct : false},
 { text:'161', correct : false}
     ]
 
 },
+// question 7
 {
     question: "99 * 7 = ?",
     answers:[
-{ text:'692', correct : false},
 { text:'693', correct : true},
-{ text:'1234', correct : false},
+{ text:'692', correct : false},
+{ text:'690', correct : false},
 { text:'691', correct : false}
     ]
 
 },
+// question 8
 {
     question: "12 * 9 = ?",
     answers:[
-{ text:'112', correct : false},
-{ text:'106', correct : false},
 { text:'108', correct : true},
+{ text:'106', correct : false},
+{ text:'112', correct : false},
 { text:'110', correct : false}
     ]
 
 },
+// question 9
 {
     question: "140 * 9 = ?",
     answers:[
@@ -224,6 +254,7 @@ const questions = [
     ]
 
 },
+// question 10
 
 {
     question: "7 * 9 = ?",
@@ -235,6 +266,7 @@ const questions = [
     ]
 
 },
+// question 11
 {
     question: "68 * 5 = ?",
     answers:[
@@ -245,16 +277,18 @@ const questions = [
     ]
 
 },
+// question 12
 {
     question: "58 * 3 = ?",
     answers:[
 { text:'178', correct : false},
 { text:'176', correct : false},
-{ text:'172', correct : false},
-{ text:'174', correct : true}
+{ text:'174', correct : true},
+{ text:'172', correct : false}
     ]
 
 },
+// question 13
 {
     question: "98 * 7 = ?",
     answers:[
@@ -265,16 +299,18 @@ const questions = [
     ]
 
 },
+// question 14
 {
     question: "15 * 9 = ?",
     answers:[
-{ text:'135', correct : true},
-{ text:'130', correct : false},
 { text:'125', correct : false},
+{ text:'130', correct : false},
+{ text:'135', correct : true},
 { text:'140', correct : false}
     ]
 
 },
+// question 15
 {
     question: "88 * 3 = ?",
     answers:[
@@ -285,6 +321,7 @@ const questions = [
     ]
 
 },
+// question 16
 
 {
     question: "66 * 4 = ?",
@@ -293,6 +330,54 @@ const questions = [
 { text:'246', correct : false},
 { text:'244', correct : false},
 { text:'248', correct : true}
+    ]
+
+},
+// question 17
+
+{
+    question: "77 * 3 = ?",
+    answers:[
+{ text:'232', correct : false},
+{ text:'233', correct : false},
+{ text:'230', correct : false},
+{ text:'231', correct : true}
+    ]
+
+},
+// question 18
+
+{
+    question: "48 * 6 = ?",
+    answers:[
+{ text:'286', correct : false},
+{ text:'290', correct : false},
+{ text:'289', correct : false},
+{ text:'288', correct : true}
+    ]
+
+},
+// question 19
+
+{
+    question: "57 * 7 = ?",
+    answers:[
+{ text:'398', correct : false},
+{ text:'396', correct : false},
+{ text:'397', correct : false},
+{ text:'399', correct : true}
+    ]
+
+},
+// question 20
+
+{
+    question: "17 * 9 = ?",
+    answers:[
+{ text:'152', correct : false},
+{ text:'154', correct : false},
+{ text:'155', correct : false},
+{ text:'153', correct : true}
     ]
 
 }
