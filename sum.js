@@ -75,7 +75,7 @@ Array.from(answerButtonsElement.children).forEach(button =>{
 if(correct){
     
     b++;
-    score.innerText = b/4 + " out of 5 ";
+    score.innerText = b/4 + " out of 20 ";
   
 }
 
@@ -88,12 +88,12 @@ nextButton.classList.remove('hide');
     results.classList.remove('hide');
     contentStart.classList.add('hide');
     contentStart.classList.remove('show');
-    if((b/4)  <= 2.5){
+    if((b/4)  <= 10){
         sucess.innerHTML = "Failure";
         body.classList.remove('correct')
         body.classList.add('wrong')
         console.log("lose")
-    }else if((b/4) > 2.5){
+    }else if((b/4) > 10){
         console.log("win")
         sucess.innerHTML = "Sucess";
         body.classList.add('correct')
@@ -160,6 +160,16 @@ const questions = [
 
 },
 {
+    question: "51 + 21 = ?",
+    answers:[
+{ text:'72', correct : true},
+{ text:'71', correct : false},
+{ text:'73', correct : false},
+{ text:'74', correct : false}
+    ]
+
+},
+{
     question: "5 + 2 = ?",
     answers:[
 { text:'7', correct : true},
@@ -170,12 +180,22 @@ const questions = [
 
 },
 {
-    question: "5 + 3 = ?",
+    question: "578 + 245 = ?",
     answers:[
-{ text:'9', correct : false},
-{ text:'6', correct : false},
-{ text:'7', correct : false},
-{ text:'8', correct : true}
+{ text:'823', correct : true},
+{ text:'822', correct : false},
+{ text:'827', correct : false},
+{ text:'825', correct : false}
+    ]
+
+},
+{
+    question: "758 + 427 = ?",
+    answers:[
+{ text:'1185', correct : true},
+{ text:'1184', correct : false},
+{ text:'1195', correct : false},
+{ text:'1187', correct : false}
     ]
 
 },
@@ -199,39 +219,6 @@ const questions = [
     ]
 
 },
-{
-    question: "51 + 21 = ?",
-    answers:[
-{ text:'72', correct : true},
-{ text:'71', correct : false},
-{ text:'73', correct : false},
-{ text:'74', correct : false}
-    ]
-
-},
-
-
-
-{
-    question: "78 + 4 = ?",
-    answers:[
-{ text:'81', correct : false},
-{ text:'83', correct : false},
-{ text:'84', correct : false},
-{ text:'82', correct : true}
-    ]
-
-},
-{
-    question: "52 + 6 = ?",
-    answers:[
-{ text:'60', correct : false},
-{ text:'59', correct : false},
-{ text:'58', correct : true},
-{ text:'100', correct : false}
-    ]
-
-},
 
 {
     question: "165 + 3 = ?",
@@ -252,5 +239,120 @@ const questions = [
 { text:'145', correct : false}
     ]
 
+},
+{
+    question: "969 + 653 = ?",
+    answers:[
+{ text:'1623', correct : false},
+{ text:'1622', correct : true},
+{ text:'1624', correct : false},
+{ text:'1621', correct : false}
+    ]
+
+},
+{
+    question: "52 + 6 = ?",
+    answers:[
+{ text:'60', correct : false},
+{ text:'59', correct : false},
+{ text:'58', correct : true},
+{ text:'100', correct : false}
+    ]
+
+},
+
+{
+    question: "524 + 656 = ?",
+    answers:[
+{ text:'1185', correct : false},
+{ text:'1190', correct : false},
+{ text:'1180', correct : true},
+{ text:'1181', correct : false}
+    ]
+
+},
+
+{
+    question: "24 + 956 = ?",
+    answers:[
+{ text:'990', correct : false},
+{ text:'984', correct : false},
+{ text:'980', correct : true},
+{ text:'970', correct : false}
+    ]
+
+},
+{
+    question: "377 + 477 = ?",
+    answers:[
+{ text:'864', correct : false},
+{ text:'856', correct : false},
+{ text:'854', correct : true},
+{ text:'855', correct : false}
+    ]
+
+},
+{
+    question: "235 + 977 = ?",
+    answers:[
+{ text:'1213', correct : false},
+{ text:'1213', correct : false},
+{ text:'1212', correct : true},
+{ text:'1211', correct : false}
+    ]
+
+},
+{
+    question: "5 + 3 = ?",
+    answers:[
+{ text:'9', correct : false},
+{ text:'6', correct : false},
+{ text:'7', correct : false},
+{ text:'8', correct : true}
+    ]
+
+},
+
+{
+    question: "78 + 4 = ?",
+    answers:[
+{ text:'81', correct : false},
+{ text:'83', correct : false},
+{ text:'84', correct : false},
+{ text:'82', correct : true}
+    ]
+
+},
+{
+    question: "780 + 434 = ?",
+    answers:[
+{ text:'1134', correct : false},
+{ text:'1218', correct : false},
+{ text:'1114', correct : false},
+{ text:'1214', correct : true}
+    ]
+
+},
+{
+    question: "117 + 434 = ?",
+    answers:[
+{ text:'553', correct : false},
+{ text:'561', correct : false},
+{ text:'552', correct : false},
+{ text:'551', correct : true}
+    ]
+
+},
+{
+    question: "347 + 554 = ?",
+    answers:[
+{ text:'881', correct : false},
+{ text:'902', correct : false},
+{ text:'891', correct : false},
+{ text:'901', correct : true}
+    ]
+
 }
+
+
 ]

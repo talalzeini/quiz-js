@@ -75,7 +75,7 @@ Array.from(answerButtonsElement.children).forEach(button =>{
 if(correct){
     
     b++;
-    score.innerText = b/4 + " out of 5 ";
+    score.innerText = b/4 + " out of 20 ";
   
 }
 
@@ -88,12 +88,12 @@ nextButton.classList.remove('hide');
     results.classList.remove('hide');
     contentStart.classList.add('hide');
     contentStart.classList.remove('show');
-    if((b/4)  <= 2.5){
+    if((b/4)  <= 10){
         sucess.innerHTML = "Failure";
         body.classList.remove('correct')
         body.classList.add('wrong')
         console.log("lose")
-    }else if((b/4) > 2.5){
+    }else if((b/4) > 10){
         console.log("win")
         sucess.innerHTML = "Sucess";
         body.classList.add('correct')
@@ -256,8 +256,8 @@ const questions = [
     answers:[
 { text:'9', correct : false},
 { text:'8', correct : false},
-{ text:'6', correct : true},
-{ text:'6', correct : false}
+{ text:'7', correct : false},
+{ text:'6', correct : true}
     ]
 },
 {
@@ -274,8 +274,8 @@ const questions = [
     answers:[
 { text:'6', correct : false},
 { text:'4', correct : false},
-{ text:'5', correct : true},
-{ text:'7', correct : false}
+{ text:'7', correct : false},
+{ text:'5', correct : true}
     ]
 },
 {
@@ -290,20 +290,48 @@ const questions = [
 {
     question: "3 - 1 = ?",
     answers:[
-{ text:'2', correct : true},
-{ text:'3', correct : false},
 { text:'4', correct : false},
-{ text:'1', correct : false}
+{ text:'3', correct : false},
+{ text:'1', correct : false},
+{ text:'2', correct : true}
     ]
 },
 {
-    question: "6 - 2 = ?",
+    question: "62 - 28 = ?",
     answers:[
 { text:'1', correct : false},
 { text:'4', correct : true},
 { text:'3', correct : false},
 { text:'2', correct : false}
     ]
+},
+{
+    question: "790 - 234 = ?",
+    answers:[
+{ text:'555', correct : false},
+{ text:'556', correct : true},
+{ text:'554', correct : false},
+{ text:'553', correct : false}
+    ]
+},
+{
+    question: "456 - 344 = ?",
+    answers:[
+{ text:'111', correct : false},
+{ text:'112', correct : true},
+{ text:'113', correct : false},
+{ text:'113', correct : false}
+    ]
+},
+{
+    question: "977 - 369 = ?",
+    answers:[
+{ text:'609', correct : false},
+{ text:'611', correct : false},
+{ text:'610', correct : false},
+{ text:'608', correct : true}
+    ]
 }
+
 
 ]
