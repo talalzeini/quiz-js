@@ -12,7 +12,10 @@ html{
     display:flex;
     align-items: center;
     justify-content: center;
-    background:linear-gradient(to top left, #66b3ff,#a3d1ff,#66b3ff) no-repeat;
+    height:100vh;
+    overflow: hidden;
+    width:100vw;
+    background:linear-gradient(to top left, #66b3ff,#a3d1ff,#66b3ff);
     background: cover;
     background-size: 100%;
     overflow: hidden;
@@ -26,7 +29,7 @@ html{
     height:100vh;
     overflow: hidden;
     width:100vw;
-    background:linear-gradient(to top left, #ffad99, #66b3ff,#80ffaa);
+    background:linear-gradient(to top left, #ffad99, #66b3ff,#80ffaa) no-repeat;
     background: cover;
     background-size: 100%;
     overflow: hidden;
@@ -381,7 +384,7 @@ html{
     padding:0;
     margin:0;
     overflow: hidden;
-    background:linear-gradient(to top left, #66b3ff,red,red) no-repeat;
+    background:linear-gradient(to top left, #66b3ff,#a3d1ff,#66b3ff);
     background: cover;
     background-size: 100%;
     overflow: hidden;
@@ -389,7 +392,7 @@ html{
 .secondBody{
     padding:0;
     margin:0;
-    background:linear-gradient(to top left, #ffad99, #66b3ff,#80ffaa) center no-repeat;
+    background:linear-gradient(to top left, #ffad99, #66b3ff,#80ffaa) no-repeat;
     background: cover;
     background-size: 100%;
     overflow: hidden;
@@ -627,7 +630,7 @@ h2{
     animation: 0.5s fadeIn;
     padding:5px 20px;
     border-radius:30px;
-    font-size: 25px;
+    font-size: 23px;
     font-weight:normal;
     color: white;
     margin: 5px auto;
@@ -635,7 +638,7 @@ h2{
     top:10px;
     display: block;
     z-index: 2;
-    width: 150px;
+    width: 175px;
     text-align: center;
     background-color: #66b3ff;
 }
