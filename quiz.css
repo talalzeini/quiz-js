@@ -153,16 +153,18 @@ html{
     background:#ffad99;
 }
 .start-btn{
+    padding:10px 20px;
+    border-radius:30px;
     font-size:2.5rem;
     margin: auto;
-    background-color: #66b3ff;
-    position: absolute;
+    width: 300px;
     top:350px;
-    border:none;
-    color: white;
-    width:300px;
-    border-radius: 30px;
-    padding:10px;
+    text-align: center;
+    background-color:#66b3ff;
+    animation: 2s fadeIn;
+    color:white;
+    position:absolute; 
+    border: none;
 }
 .options{
  
@@ -575,7 +577,7 @@ html{
     color: white;
     width:200px;
     position: fixed;
-    bottom:75px;
+    bottom:35px;
     left:0;
     right: 50px;
     border-color: transparent;
