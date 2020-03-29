@@ -158,8 +158,11 @@ html{
     background-color: #66b3ff;
     position: absolute;
     top:350px;
+    border:none;
     color: white;
     width:300px;
+    border-radius: 30px;
+    padding:10px;
 }
 .options{
  
@@ -572,7 +575,7 @@ html{
     color: white;
     width:200px;
     position: fixed;
-    bottom:100px;
+    bottom:75px;
     left:0;
     right: 50px;
     border-color: transparent;
