@@ -3,45 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="quiz.css" type="text/css" rel="stylesheet">
-    <title>Simple Quiz</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <title>MATH QUIZ</title>
 </head>
 
-<body id="body" class="firstBody">
-        <h1 id="quiz-button" class="fadeLeft">QUIZ</h1>
-        <h2 id="quiz-button2"  class="header hide">RANDOM</h2> 
+<body id="body" class='black'>
+        <h1 id="quizTitle">QUIZ</h1>
     <div id="results" class="results hide"> 
-        <button id="menu" onclick="reload()" class="menu">Menu</button>  
-        <button id="score" class="score">Score</button>  
-        <button id="sucess" class="sucess">Result</button> 
-        <button id="restart-btn" class="restart-btn fadeRight">Restart</button>
+        <button id="score" class="mainBtns">Score</button>  
+        <button id="sucess" class="mainBtns">Result</button> 
+        <button id="restart-btn" class="mainBtns">Restart</button>
     </div>   
     
-        <div id="content" class="container">
-        
-                    <div id="question-container" class="hide">
-                                <h4 id = "numberOfQuestions">1</h4>
- 
-                                <button id="question" class="btnquestion">Question</button>
 
-                                <div id="answer-buttons" class="btn-grid">
-                                        <button class="btn">Answer 1</button>
-                                        <button  class="btn">Answer 2</button>
-                                        <button  class="btn">Answer 3</button>
-                                        <button  class="btn">Answer 4</button>
-                                </div>
+
+
+<div id="content" class="container hide">
+            <div id="question-container" class="hide">
+                    <p class="quizTitle" name="text">QUIZ - <span id='numberOfQuestions'>1</span></p>
+                    <button id="question" class="question"></button>
+                    <div id="answer-buttons">
+                        <button class="ansBtns">Answer 1</button>
+                        <button class="ansBtns">Answer 2</button>
+                        <button class="ansBtns">Answer 3</button>
+                        <button class="ansBtns">Answer 4</button>
                     </div>
-        
+            </div>
+    <button id="nextButton" class="mainBtns hide" onclick="setNextQuestion()">Next</button>
+</div>
 
-                                <div class="controls">
-                                            <button id="start-btn" class="start-btn btn fadeLeft">Start</button>
-                                            <button id="next-btn" class="next-btn hide">Next</button>
-                                            
-                                </div>
-                                <button onclick="window.location.href = 'options.html'" id="quiz-options" class ="options fadeRight">Options</button>
-                                
-        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  
-        <script  src="quiz.js"></script>
+        <script  src="script.js"></script>
     </body>
 </html>
